@@ -1,12 +1,5 @@
-/**
-* Template Name: AgriCulture
-* Template URL: https://bootstrapmade.com/agriculture-bootstrap-website-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -26,7 +19,7 @@
    * Scroll up sticky header to headers with .scroll-up-sticky class
    */
   let lastScrollTop = 0;
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
     const selectHeader = document.querySelector('#header');
     if (!selectHeader.classList.contains('scroll-up-sticky')) return;
 
@@ -73,7 +66,7 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
@@ -142,7 +135,7 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );

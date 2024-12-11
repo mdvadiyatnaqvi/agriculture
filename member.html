@@ -80,13 +80,8 @@
         </div><!-- End Page Title -->
 
         <!-- Contact Section -->
-        <section id="contact" class="contact section">
+        <section id="contact" class="contact section mt-5">
 
-            <div class="mb-5">
-                <iframe style="width: 100%; height: 400px;"
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                    frameborder="0" allowfullscreen=""></iframe>
-            </div><!-- End Google Maps -->
 
             <div class="container" data-aos="fade">
 
@@ -95,7 +90,7 @@
                     <div class="col-lg-4">
 
                         <div class="info">
-                            <h3>Get in touch</h3>
+                            <h3>Be a Member</h3>
                             <p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia
                                 commodi minus.</p>
 
@@ -140,8 +135,10 @@
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <input type="text" class="form-control" name="subject" id="subject"
-                                    placeholder="Subject" required="">
+                                <input type="number"
+                                    oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10)"
+                                    class="form-control" name="subject" id="subject" placeholder="Your Number"
+                                    required="">
                             </div>
                             <div class="form-group mt-3">
                                 <textarea class="form-control" name="message" placeholder="Message"
@@ -152,7 +149,7 @@
                                 <div class="error-message"></div>
                                 <div class="sent-message">Your message has been sent. Thank you!</div>
                             </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
+                            <div class="text-center"><button type="submit">Get Certified</button></div>
                         </form>
                     </div><!-- End Contact Form -->
 

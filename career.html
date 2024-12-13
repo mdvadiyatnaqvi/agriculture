@@ -146,6 +146,7 @@
                                 <label for="dob" class="form-label">Date-of-Birth</label>
                                 <input type="date" class="form-control" id="dob">
                             </div>
+                            <!-- gender -->
                             <div class="col-md-6">
                                 <label class="form-label">Gender</label>
                                 <div>
@@ -181,6 +182,11 @@
                             <div class="col-md-6">
                                 <label class="form-label">Category</label>
                                 <div>
+                                    <!-- <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="category" id="gen"
+                                            value="gen">
+                                        <label class="form-check-label" for="gen">GEN</label>
+                                    </div> -->
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="category" id="sc" value="sc"
                                             required>
@@ -206,17 +212,135 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Sign in</button>
+
+                            <label for="religion" class="form-label">Ex-Service Man</label>
+                            <div class="col-md-6">
+                                <label for="dateOfJoiningServie" class="form-label">Date of Joining Servie</label>
+                                <input type="date" class="form-control" id="dateOfJoiningServie">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="dateOfDischargeFromService" class="form-label">Date of Discharge from
+                                    Service</label>
+                                <input type="date" class="form-control" id="dateOfDischargeFromService">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phoneNumber" class="form-label">Phone Number</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">+91</span>
+                                    <input type="tel" class="form-control" id="phoneNumber"
+                                        oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10)"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- education input -->
+                            <div class="container mt-5">
+                                <label>Educational Qualification</label>
+                                <form id="qualificationForm">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="qualificationTable">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Qualification</th>
+                                                    <th scope="col">Subject</th>
+                                                    <th scope="col">Percentage</th>
+                                                    <th scope="col">School/College</th>
+                                                    <th scope="col">Year of Passing</th>
+                                                    <th scope="col">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <select class="form-select" name="qualification[]">
+                                                            <option value="10th">10th</option>
+                                                            <option value="12th">12th</option>
+                                                            <option value="graduation">Graduation</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" name="subject[]"
+                                                            placeholder="Enter Subject" required>
+                                                    </td>
+                                                    <td>
+                                                        <input type="number" class="form-control" name="percentage[]"
+                                                            placeholder="Enter Percentage" required>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" name="school_college[]"
+                                                            placeholder="Enter School/College" required>
+                                                    </td>
+                                                    <td>
+                                                        <input type="number" class="form-control"
+                                                            name="year_of_passing[]" placeholder="Enter Year" required>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button"
+                                                            class="btn btn-danger removeRowBtn">Remove</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <button type="button" class="btn btn-secondary" id="addRowBtn">Add More</button>
+                                    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                                </form>
+                            </div>
+                            <!-- education input end -->
+
+
+                            <!-- experience input -->
+                            <div class="container mt-5">
+                                <h2>Experience Details</h2>
+                                <form id="experienceForm">
+                                    <table class="table table-bordered" id="experienceTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Name of Org</th>
+                                                <th>Designation</th>
+                                                <th>Nature of Duty</th>
+                                                <th>Date From</th>
+                                                <th>Date To</th>
+                                                <th>Duration</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Experience Rows will go here -->
+                                            <tr>
+                                                <td><input type="text" class="form-control" name="org[]"
+                                                        placeholder="Organization Name"></td>
+                                                <td><input type="text" class="form-control" name="designation[]"
+                                                        placeholder="Designation"></td>
+                                                <td><input type="text" class="form-control" name="duty[]"
+                                                        placeholder="Nature of Duty"></td>
+                                                <td><input type="date" class="form-control" name="date_from[]"></td>
+                                                <td><input type="date" class="form-control" name="date_to[]"></td>
+                                                <td><input type="text" class="form-control" name="duration[]"
+                                                        placeholder="Duration"></td>
+                                                <td><button type="button"
+                                                        class="btn btn-danger removeRow">Remove</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <button type="button" class="btn btn-secondary" id="addRowBtn1">Add More</button>
+                                </form>
+                            </div>
+                            <!-- experience input end -->
+
+                            <div class="col-12 d-flex justify-content-center">
+                                <button type="submit" class="btn btn-primary">Apply</button>
                             </div>
                         </form>
                     </div>
-
-
                 </div>
-
             </div>
-
         </section>
         <!-- /Contact Section -->
 
@@ -332,6 +456,7 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="./assets/js/custom.js"></script>
 
 </body>
 

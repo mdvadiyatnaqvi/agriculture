@@ -29,6 +29,28 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
 
+    <style>
+        /* Custom styling for form input fields with myz prefix */
+        .myz-input-field {
+            border-bottom: 2px solid black;
+            display: inline-block;
+            width: auto;
+            min-width: 200px;
+            padding: 0.5rem;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .myz-certification-text {
+            margin-top: 30px;
+        }
+
+        .myz-label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+
 
 </head>
 
@@ -335,6 +357,204 @@
                                 </form>
                             </div>
                             <!-- experience input end -->
+
+                            <!-- yes no -->
+                            <div class="container mt-5">
+                                <!-- <h2>Application Form</h2> -->
+                                <form>
+                                    <!-- Question: If employed in Govt. Dept. / PSU -->
+                                    <div class="form-group d-flex flex-row flex-wrap">
+                                        <label for="employedStatus">If employed in Govt. Dept. / PSU, whether applied
+                                            through proper
+                                            channel:&nbsp;</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="appliedChannel"
+                                                id="yesOption" value="yes">
+                                            <label class="form-check-label" for="yesOption">
+                                                Yes&nbsp;
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="appliedChannel"
+                                                id="noOption" value="no">
+                                            <label class="form-check-label" for="noOption">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                                </form>
+                            </div>
+
+                            <!-- 18 fill blanks -->
+
+                            <div class="container mt-5">
+                                <!-- <h2>Demand Draft Details</h2> -->
+                                <form>
+                                    <!-- DD No. -->
+                                    <div class="form-group">
+                                        <label for="ddNumber">DD No.</label>
+                                        <input type="text" class="form-control" id="ddNumber"
+                                            placeholder="Enter DD Number">
+                                    </div>
+
+                                    <!-- Date -->
+                                    <div class="form-group">
+                                        <label for="ddDate">Date</label>
+                                        <input type="date" class="form-control" id="ddDate">
+                                    </div>
+
+                                    <!-- Name of Issuing Branch -->
+                                    <div class="form-group">
+                                        <label for="branchName">Name of Issuing Branch</label>
+                                        <input type="text" class="form-control" id="branchName"
+                                            placeholder="Enter Issuing Branch Name">
+                                    </div>
+
+                                    <!-- Branch Code No. -->
+                                    <div class="form-group">
+                                        <label for="branchCode">Branch Code No.</label>
+                                        <input type="text" class="form-control" id="branchCode"
+                                            placeholder="Enter Branch Code Number">
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                                </form>
+                            </div>
+
+                            <!-- declaration -->
+                            <div class="col-md-12 mt-3 mb-3">
+                                <p for="" style="text-align: justify;">Declaration : I hereby declare that all
+                                    statements
+                                    made in the application
+                                    are
+                                    true, complete and correct to
+                                    the best of my knowledge and belief. I also undertake that I have not submitted
+                                    applications for two
+                                    different posts advertised. The relevant clause is stated below for easy reference
+                                    :-
+                                    “Candidates can
+                                    apply against any one post only. Candidates applying for more than one post will not
+                                    be
+                                    considered and
+                                    such applications will be rejected.” I understand that in the event of any
+                                    information
+                                    being found untrue /
+                                    false / incorrect or I do not satisfy the eligibility criteria, my candidature /
+                                    appointment will be cancelled /
+                                    terminated, without assigning any reasons thereof. I have read the contents of the
+                                    advertisement and
+                                    agree to abide by the rules, regulations and procedures for appointment to the post
+                                    applied for.</p>
+                            </div>
+
+                            <div class="container d-flex justify-content-between mb-3">
+                                <div class="col-md-6">
+                                    <label for="date" class="form-label">Date</label>
+                                    <input type="date" class="form-control" id="date" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="place" class="form-label">Place</label>
+                                    <input type="text" class="form-control" id="place" required>
+                                </div>
+                            </div>
+
+                            <!-- signature -->
+
+                            <div class="col-md-6 mb-3">
+                                <label for="signature" class="form-label">Signature</label>
+                                <input type="file" class="form-control" id="signature" accept="image/*" required>
+                            </div>
+
+                            <!-- identity certificate below -->
+
+                            <div class="container mt-5">
+                                <h4 class="text-center">Identity Certificate</h4>
+                                <form>
+                                    <!-- Certification Text -->
+                                    <div class="form-group myz-certification-text">
+                                        <label for="name" class="myz-label">This is to certify that the details and
+                                            photograph of Shri</label>
+                                        <input type="text" class="myz-input-field" id="name" placeholder="Enter Name">
+                                        <label for="fatherName" class="myz-label">S/o.</label>
+                                        <input type="text" class="myz-input-field" id="fatherName"
+                                            placeholder="Enter Father's Name">
+                                        <label for="residence" class="myz-label">and resident of (R/O)</label>
+                                        <input type="text" class="myz-input-field" id="residence"
+                                            placeholder="Enter Residence">
+                                        <label for="postApplied" class="myz-label">who has applied for the post
+                                            of</label>
+                                        <input type="text" class="myz-input-field" id="postApplied"
+                                            placeholder="Enter Post Name">
+                                        <label for="verificationStatus" class="myz-label">is verified and certified as
+                                            correct and genuine.</label>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                                </form>
+                            </div>
+
+                            <!-- address again -->
+                            <div class="col-12">
+                                <label for="permanentAddress1" class="form-label">Permanent Address</label>
+                                <input type="text" class="form-control" id="permanentAddress1" required
+                                    placeholder="1234 Main St">
+                            </div>
+                            <div class="col-12">
+                                <label for="presentAddress1" class="form-label">Present Address</label>
+                                <input type="text" class="form-control" id="presentAddress1" required
+                                    placeholder="Apartment, studio, or floor">
+                            </div>
+
+                            <!-- another details -->
+
+                            <div class="d-flex flex-wrap flex-row justify-content-center mt-3">
+                                <div class="col-md-6">
+                                    <label for="signOfCandidate" class="form-label">Signature of the Candidate</label>
+                                    <input type="file" class="form-control" id="signOfCandidate" accept="image/*"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="signOfCertifyingOfficer" class="form-label">Signature of the Certifying
+                                        Officer</label>
+                                    <input type="file" class="form-control" id="signOfCertifyingOfficer"
+                                        accept="image/*" required>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap flex-row justify-content-center mt-3">
+                                <div class="col-md-6">
+                                    <label for="nameOfCertifyingOfficer" class="form-label">Name of Certifying
+                                        Officer</label>
+                                    <input type="text" class="form-control" id="nameOfCertifyingOfficer" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="fatherName" class="form-label">Phone No. of Certifying Officer</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">+91</span>
+                                        <input type="tel" class="form-control" id="phoneNumber"
+                                            oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10)"
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mt-3 mb-3">
+                                <label for="designation" class="form-label">Designation</label>
+                                <input type="text" class="form-control" id="designation" required>
+                            </div>
+                            <div class="col-md-12">
+                                <p style="text-align: justify;">[Note : Identity of the Candidate should be certified by
+                                    an Officer not below the rank of
+                                    Tehsildar / Sub-Divisional Officer of the candidate’s domicile place / native place,
+                                    Principal
+                                    of the school / college from where the candidate has passed his 10th Standard,
+                                    Intermediate
+                                    or Graduation / Diploma along with name, designation and seal of office.]</p>
+                            </div>
 
                             <div class="col-12 d-flex justify-content-center">
                                 <button type="submit" class="btn btn-primary">Apply</button>

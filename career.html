@@ -299,36 +299,38 @@
                             <div class="container mt-5">
                                 <label>Experience Details</label>
                                 <form id="experienceForm">
-                                    <table class="table table-bordered" id="experienceTable">
-                                        <thead>
-                                            <tr>
-                                                <th>Name of Org</th>
-                                                <th>Designation</th>
-                                                <th>Nature of Duty</th>
-                                                <th>Date From</th>
-                                                <th>Date To</th>
-                                                <th>Duration</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <!-- Experience Rows will go here -->
-                                            <tr>
-                                                <td><input type="text" class="form-control" name="org[]"
-                                                        placeholder="Organization Name"></td>
-                                                <td><input type="text" class="form-control" name="designation[]"
-                                                        placeholder="Designation"></td>
-                                                <td><input type="text" class="form-control" name="duty[]"
-                                                        placeholder="Nature of Duty"></td>
-                                                <td><input type="date" class="form-control" name="date_from[]"></td>
-                                                <td><input type="date" class="form-control" name="date_to[]"></td>
-                                                <td><input type="text" class="form-control" name="duration[]"
-                                                        placeholder="Duration"></td>
-                                                <td><button type="button"
-                                                        class="btn btn-danger removeRow">Remove</button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="experienceTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name of Org</th>
+                                                    <th>Designation</th>
+                                                    <th>Nature of Duty</th>
+                                                    <th>Date From</th>
+                                                    <th>Date To</th>
+                                                    <th>Duration</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- Experience Rows will go here -->
+                                                <tr>
+                                                    <td><input type="text" class="form-control" name="org[]"
+                                                            placeholder="Organization Name"></td>
+                                                    <td><input type="text" class="form-control" name="designation[]"
+                                                            placeholder="Designation"></td>
+                                                    <td><input type="text" class="form-control" name="duty[]"
+                                                            placeholder="Nature of Duty"></td>
+                                                    <td><input type="date" class="form-control" name="date_from[]"></td>
+                                                    <td><input type="date" class="form-control" name="date_to[]"></td>
+                                                    <td><input type="text" class="form-control" name="duration[]"
+                                                            placeholder="Duration"></td>
+                                                    <td><button type="button"
+                                                            class="btn btn-danger removeRow">Remove</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                     <button type="button" class="btn btn-secondary" id="addRowBtn1">Add More</button>
                                 </form>
                             </div>

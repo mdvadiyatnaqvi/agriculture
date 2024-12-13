@@ -4,35 +4,38 @@ document.getElementById('addRowBtn').addEventListener('click', function () {
     const newRow = document.createElement('tr');
 
     newRow.innerHTML = `
-            <td>
-                <select class="form-select" name="qualification[]">
-                    <option value="10th">10th</option>
-                    <option value="12th">12th</option>
-                    <option value="graduation">Graduation</option>
-                </select>
-            </td>
-            <td>
-                <input type="text" class="form-control" name="subject[]" placeholder="Enter Subject" required>
-            </td>
-            <td>
-                <input type="number" class="form-control" name="percentage[]" placeholder="Enter Percentage" required>
-            </td>
-            <td>
-                <input type="text" class="form-control" name="school_college[]" placeholder="Enter School/College" required>
-            </td>
-            <td>
-                <input type="number" class="form-control" name="year_of_passing[]" placeholder="Enter Year" required>
-            </td>
-            <td>
-                <button type="button" class="btn btn-danger removeRowBtn">Remove</button>
-            </td>
-        `;
+        <td>
+            <select class="form-select" name="qualification[]">
+                <option value="10th">10th</option>
+                <option value="12th">12th</option>
+                <option value="graduation">Graduation</option>
+            </select>
+        </td>
+        <td>
+            <input type="text" class="form-control" name="subject[]" placeholder="Enter Subject" required>
+        </td>
+        <td>
+            <input type="number" class="form-control" name="percentage[]" placeholder="Enter Percentage" required>
+        </td>
+        <td>
+            <input type="text" class="form-control" name="school_college[]" placeholder="Enter School/College" required>
+        </td>
+        <td>
+            <input type="number" class="form-control" name="year_of_passing[]" placeholder="Enter Year" required>
+        </td>
+        <td>
+            <button type="button" class="btn btn-danger removeRowBtn">Remove</button>
+        </td>
+    `;
 
     // Append the new row to the table
     tableBody.appendChild(newRow);
 
-    // Check if there is more than one row, and enable/disable the "Remove" button accordingly
-    updateRemoveButtons();
+    // Add an event listener to the remove button to delete the row
+    const removeButton = newRow.querySelector('.removeRowBtn');
+    removeButton.addEventListener('click', function () {
+        newRow.remove(); // Removes the row from the table
+    });
 });
 
 // for experience input
@@ -55,7 +58,7 @@ document.getElementById('addRowBtn1').addEventListener('click', function () {
     tableBody.appendChild(newRow);
 });
 
-// Handle removing rows
+// Handle removing rows 
 document.querySelector('#experienceTable').addEventListener('click', function (event) {
     if (event.target && event.target.classList.contains('removeRow')) {
         // Get the number of rows in the table
